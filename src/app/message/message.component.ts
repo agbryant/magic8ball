@@ -38,12 +38,11 @@ export class MessageComponent implements OnInit {
 
   shakeUp(){
     this.number = this.getRandomInt(0, this.possibleMessages.length - 1);
-    this.message = this.possibleMessages[this.number];
+    this.message = this.possibleMessages[this.number].toUpperCase();
   }
 
-
-    getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+  getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
 }
