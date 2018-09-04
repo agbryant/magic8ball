@@ -1,6 +1,8 @@
-# Magic8
+# Magic 8-Ball
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+
+Default messages based on https://en.wikipedia.org/wiki/Magic_8-Ball
 
 ## Development server
 
