@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DEFAULT_MESSAGES } from '../default-messages';
+
 import {
   trigger,
   state,
@@ -9,11 +11,11 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-message',
-  templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  selector: 'app-display',
+  templateUrl: './display.component.html',
+  styleUrls: ['./display.component.css']
 })
-export class MessageComponent implements OnInit {
+export class DisplayComponent implements OnInit {
 
   outercircle = 'circle';
   innercircle = 'inner-circle-other-side';
@@ -21,28 +23,7 @@ export class MessageComponent implements OnInit {
   triangle = 'hidden';
   message = '';
   number = 0;
-  possibleMessages = [
-   "It is certain.",
-   "It is decidedly so.",
-   "Without a doubt.",
-   "Yes - definitely.",
-   "You may rely on it.",
-   "As I see it, yes.",
-   "Most likely.",
-   "Outlook good.",
-   "Yes.",
-   "Signs point to yes.",
-   "Reply hazy, try again",
-   "Ask again later.",
-   "Better not tell you now.",
-   "Cannot predict now.",
-   "Concentrate and ask again.",
-   "Don't count on it.",
-   "My reply is no.",
-   "My sources say no",
-   "Outlook not so good.",
-   "Very doubtful."
-  ];
+  possibleMessages = DEFAULT_MESSAGES;
   constructor() { }
 
   ngOnInit() {
@@ -50,7 +31,7 @@ export class MessageComponent implements OnInit {
 
   getMessage(){
     this.number = this.getRandomInt(0, this.possibleMessages.length - 1);
-    this.message = this.possibleMessages[this.number].toUpperCase();
+    this.message = this.possibleMessages[this.number].text.toUpperCase();
   }
 
   getRandomInt(min, max) {
