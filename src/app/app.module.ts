@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
-import { MessageEditorComponent } from './message-editor/message-editor.component';
+import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { MessageDetailComponent } from './message-detail/message-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
-    MessageEditorComponent
+    MessagesComponent,
+    MessageDetailComponent
   ],
   imports: [
     BrowserModule,

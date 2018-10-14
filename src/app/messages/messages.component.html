@@ -1,0 +1,15 @@
+<h2 class="centerFlex">Messages</h2>
+<div class="centerFlex" *ngIf="selectedMessage">
+  <app-message-detail [message]="selectedMessage"></app-message-detail>
+</div>
+<br/>
+<br/>
+<div class="centerFlex">
+  <ul class="messages">
+    <li *ngFor="let message of messages"
+        [class.selected]="message === selectedMessage"
+        (click)="onSelect(message)">
+      <span class="badge">{{message.id}}</span> {{message.text}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<div class="message-details" *ngIf="message">
+  <h3> Editing Message Details</h3>
+  <div class="detail"><span>id: </span>{{message.id}}</div>
+  <div class="detail">
+    <label>text:
+      <input [(ngModel)]="message.text" placeholder="text"/>
+    </label>
+  </div>
+  <div class="detail">
+    <label>weight:
+      <input [(ngModel)]="message.weight" placeholder="1"/>
+    </label>
+  </div>
+</div>

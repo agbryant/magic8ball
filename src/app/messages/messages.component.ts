@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Message } from '../message';
-import { DEFAULT_MESSAGES } from '../default-messages';
+import { DEFAULT_MESSAGES } from '../util/default-messages';
 
 @Component({
-  selector: 'app-message-editor',
-  templateUrl: './message-editor.component.html',
-  styleUrls: ['./message-editor.component.css']
+  selector: 'app-messages',
+  templateUrl: './messages.component.html',
+  styleUrls: ['./messages.component.css']
 })
-export class MessageEditorComponent implements OnInit {
+export class MessagesComponent implements OnInit {
 
   messages = DEFAULT_MESSAGES
   selectedMessage: Message

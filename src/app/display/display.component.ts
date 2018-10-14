@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DEFAULT_MESSAGES } from '../default-messages';
+import { DEFAULT_MESSAGES } from '../util/default-messages';
 
 import {
   trigger,

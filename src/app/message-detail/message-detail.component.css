@@ -1,0 +1,11 @@
+.message-details {
+    background-color: rebeccapurple;
+    padding: 5px;
+    border-radius: 4px;
+}
+.detail {
+    margin: 7px;
+}
+.detail input {
+    border-radius: 4px;
+}
