@@ -87,3 +87,33 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
+
+.display-options {
+    text-align: center;
+}
+.display-options a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  color: #607d8b;
+}
+.display-options a:visited, a:link {
+  color: #607d8b;
+}
+.display-options a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+.display-options a.active {
+  color: #039be5;
+}
+.selected {
+    background-color: darkgreen !important;
+    color: #FFFFFF !important;
+}

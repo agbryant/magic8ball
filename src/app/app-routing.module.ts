@@ -6,7 +6,8 @@ import { DisplayComponent } from './display/display.component';
 import { MessagesComponent } from './messages/messages.component';
 
 const routes: Routes = [
-  { path: '', component: DisplayComponent },
+  { path: '', redirectTo: '/display', pathMatch: 'full' },
+  { path: 'display', component: DisplayComponent },
   { path: 'edit', component: MessagesComponent }
 ];
 
