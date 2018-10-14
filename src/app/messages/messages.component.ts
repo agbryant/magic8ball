@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Message } from '../message';
-import { DEFAULT_MESSAGES } from '../util/default-messages';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-messages',
@@ -10,16 +10,22 @@ import { DEFAULT_MESSAGES } from '../util/default-messages';
 })
 export class MessagesComponent implements OnInit {
 
-  messages = DEFAULT_MESSAGES
-  selectedMessage: Message
+  messages: Message[];
+  selectedMessage: Message;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
+    this.getMessages();
   }
 
   onSelect(message: Message): void {
     this.selectedMessage = message;
+  }
+
+  getMessages(): void {
+    this.messageService.getMessages()
+                       .subscribe( messages => this.messages = messages );
   }
 
 }

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DEFAULT_MESSAGES } from '../util/default-messages';
-
 import {
   trigger,
   state,
@@ -9,6 +7,10 @@ import {
   animate,
   transition
 } from '@angular/animations';
+
+import { Message } from '../message';
+import { MessageService } from '../message.service';
+
 
 @Component({
   selector: 'app-display',
@@ -23,10 +25,10 @@ export class DisplayComponent implements OnInit {
   triangle = 'hidden';
   message = '';
   number = 0;
-  possibleMessages = DEFAULT_MESSAGES;
+  possibleMessages: Message[];
   weighted: boolean = false;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnInit() {
   }
@@ -93,6 +95,12 @@ export class DisplayComponent implements OnInit {
 
   toggleWeight(){
     this.weighted = !this.weighted;
+  }
+
+
+  getMessages(): void {
+    this.messageService.getMessages()
+                     .subscribe( messages => this.possibleMessages = messages );
   }
 
 }
