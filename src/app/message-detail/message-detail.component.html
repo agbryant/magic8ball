@@ -1,15 +1,20 @@
 <div class="message-details" *ngIf="message">
-  <h3 class="center"> Edit Message Details</h3>
-  <div class="detail"><span>id: </span>{{message.id}}</div>
-  <div class="detail">
-    <label>text:
-      <input [(ngModel)]="message.text" placeholder="text"/>
-    </label>
-  </div>
-  <div class="detail">
-    <label>weight:
-      <input [(ngModel)]="message.weight" placeholder=1 type="number" />
-    </label>
-  </div>
-  <button (click)="goBack()">go back</button>
+    <h3 class="center"> Edit Message Details</h3>
+    <p *ngIf="globals.weighted">
+        Increasing message 'weight' will impact probability of that response showing up when the 'Weighted' option is selected
+    </p>
+    <div class="detail">
+        <span>id: </span>{{message.id}}
+    </div>
+    <div class="detail">
+        <label>text:
+            <input [(ngModel)]="message.text" placeholder="text"/>
+        </label>
+    </div>
+    <div class="detail" *ngIf="globals.weighted">
+        <label>weight:
+          <input [(ngModel)]="message.weight" placeholder=1 type="number" />
+        </label>
+    </div>
+    <button (click)="goBack()">go back</button>
 </div>

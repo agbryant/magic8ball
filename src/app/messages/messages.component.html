@@ -1,8 +1,8 @@
 <h2 class="centerFlex">Messages</h2>
-<div class="centerFlex">
+<div class="centerFlex grid grid-pad">
   <ul class="messages">
     <li *ngFor="let message of messages">
-      <a routerLink="/edit/{{message.id}}">
+      <a routerLink="/edit/{{message.id}}" class="col-1-4">
       <span class="badge">{{message.id}}</span> {{message.text}}
       </a>
     </li>

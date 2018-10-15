@@ -1,20 +1,13 @@
 <div class="background">
-  <h2 class="center">
-    Think of a question, Magic 8-Ball will provide an answer!
-  </h2>
-  <div [ngClass]="outercircle" (mouseover)="shakeUp($event)" (mouseleave)="shakeUp($event)">
-      <div class="centering-triangle">
-        <div [ngClass]="innercircle">
-          <h1 [ngClass]="otherside">8</h1>
-          <div [ngClass]="triangle">
-            <p class="circle-center">{{message}}</p>
-          </div>
+    <h2 class="center">Think of a question, Magic 8-Ball will provide an answer!</h2>
+    <div [ngClass]="outercircle" (mouseover)="shakeUp($event)" (mouseleave)="shakeUp($event)">
+        <div class="centering-triangle">
+            <div [ngClass]="innercircle">
+                <h1 [ngClass]="otherside">8</h1>
+                <div [ngClass]="triangle">
+                    <p class="circle-center">{{message}}</p>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
-  <br/>
-  <h3 class="center">Display Options:</h3>
-  <div class="display-options">
-    <a [class.selected]="weighted" (click)="toggleWeight()"> Weighted</a>
-  </div>
 </div>

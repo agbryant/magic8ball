@@ -7,13 +7,15 @@ import { DisplayComponent } from './display/display.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
+import { DisplayOptionComponent } from './display-option/display-option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
     MessagesComponent,
-    MessageDetailComponent
+    MessageDetailComponent,
+    DisplayOptionComponent
   ],
   imports: [
     BrowserModule,

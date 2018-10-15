@@ -10,7 +10,7 @@ import {
 
 import { Message } from '../message';
 import { MessageService } from '../message.service';
-
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-display',
@@ -26,9 +26,11 @@ export class DisplayComponent implements OnInit {
   message = '';
   number = 0;
   possibleMessages: Message[];
-  weighted: boolean = false;
+  uncertain: boolean = false;
 
-  constructor(private messageService: MessageService) { }
+  constructor(
+    private messageService: MessageService,
+    private globals: Globals) { }
 
   ngOnInit(): void {
     this.getMessages();
@@ -36,11 +38,16 @@ export class DisplayComponent implements OnInit {
 
   getMessage(){
 
+    if( this.globals.uncertain != this.uncertain ){
+        this.getMessages();
+        this.uncertain = !this.uncertain;
+    }
+
     let messageList = this.possibleMessages;
 
-    if(this.weighted){
+    if(this.globals.weighted){
 
-        this.message = this.getRandomMessage(messageList);
+        this.message = this.getRandomMessage(messageList).toUpperCase();
 
     } else {
 
@@ -93,11 +100,6 @@ export class DisplayComponent implements OnInit {
         this.otherside = 'hidden';
     }
   }
-
-  toggleWeight(){
-    this.weighted = !this.weighted;
-  }
-
 
   getMessages(): void {
     this.messageService.getMessages()

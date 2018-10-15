@@ -1,0 +1,37 @@
+.display-options {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+.display-options a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #eee;
+  border-radius: 4px;
+  color: #607d8b;
+}
+.display-options a:visited, a:link {
+  color: #607d8b;
+}
+.display-options a:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+.display-options a.active {
+  color: #039be5;
+}
+.selected {
+    background-color: darkgreen !important;
+    color: #FFFFFF !important;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}

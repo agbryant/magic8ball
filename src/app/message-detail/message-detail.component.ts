@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Message } from '../message';
 import { MessageService } from '../message.service';
+import { Globals } from '../globals';
 
 @Component({
   selector: 'app-message-detail',
@@ -17,7 +18,8 @@ export class MessageDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private messageService: MessageService,
-    private location: Location
+    private location: Location,
+    private globals: Globals
   ) { }
 
   ngOnInit(): void {
