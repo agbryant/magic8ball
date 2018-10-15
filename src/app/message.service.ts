@@ -14,4 +14,8 @@ export class MessageService {
   getMessages(): Observable<Message[]> {
     return of(DEFAULT_MESSAGES);
   }
+
+  getMessage(id: number): Observable<Message> {
+    return of(DEFAULT_MESSAGES.find(message => message.id === id));
+  }
 }

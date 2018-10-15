@@ -1,5 +1,5 @@
 <div class="message-details" *ngIf="message">
-  <h3> Edit Message Details</h3>
+  <h3 class="center"> Edit Message Details</h3>
   <div class="detail"><span>id: </span>{{message.id}}</div>
   <div class="detail">
     <label>text:
@@ -11,4 +11,5 @@
       <input [(ngModel)]="message.weight" placeholder=1 type="number" />
     </label>
   </div>
+  <button (click)="goBack()">go back</button>
 </div>

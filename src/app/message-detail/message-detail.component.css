@@ -2,10 +2,38 @@
     background-color: rebeccapurple;
     padding: 5px;
     border-radius: 4px;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 300px;
+    height: 225px;
 }
 .detail {
-    margin: 7px;
+    margin: 10px;
 }
 .detail input {
     border-radius: 4px;
+    height: 20px;
+    width: 75%;
+}
+
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+  color: #607D8B;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
 }

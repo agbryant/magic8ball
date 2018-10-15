@@ -11,16 +11,11 @@ import { MessageService } from '../message.service';
 export class MessagesComponent implements OnInit {
 
   messages: Message[];
-  selectedMessage: Message;
 
   constructor(private messageService: MessageService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getMessages();
-  }
-
-  onSelect(message: Message): void {
-    this.selectedMessage = message;
   }
 
   getMessages(): void {

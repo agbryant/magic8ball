@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DisplayComponent } from './display/display.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageDetailComponent } from './message-detail/message-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/display', pathMatch: 'full' },
   { path: 'display', component: DisplayComponent },
-  { path: 'edit', component: MessagesComponent }
+  { path: 'edit', component: MessagesComponent },
+  { path: 'edit/:id', component: MessageDetailComponent }
 ];
 
 @NgModule({

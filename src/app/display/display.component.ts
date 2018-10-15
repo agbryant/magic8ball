@@ -30,7 +30,8 @@ export class DisplayComponent implements OnInit {
 
   constructor(private messageService: MessageService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getMessages();
   }
 
   getMessage(){
