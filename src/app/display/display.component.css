@@ -87,3 +87,12 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+.animate-flicker {
+    animation: fadeIn 10s infinite alternate;
+}

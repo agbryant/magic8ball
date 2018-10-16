@@ -19,6 +19,9 @@
   border-radius: 4px;
 }
 
+.messages li:first-child {
+    margin-top: 0;
+}
 
 .messages li:hover {
   background-color:#607D8B;
