@@ -4,7 +4,8 @@ import { Message } from './message';
 import { Globals } from './globals';
 
 @Pipe({
-  name: 'question'
+  name: 'question',
+  pure: false
 })
 export class QuestionPipe implements PipeTransform {
 
