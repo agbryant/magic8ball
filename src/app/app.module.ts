@@ -8,6 +8,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
 import { DisplayOptionComponent } from './display-option/display-option.component';
+import { QuestionPipe } from './question.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DisplayOptionComponent } from './display-option/display-option.componen
     DisplayComponent,
     MessagesComponent,
     MessageDetailComponent,
-    DisplayOptionComponent
+    DisplayOptionComponent,
+    QuestionPipe
   ],
   imports: [
     BrowserModule,

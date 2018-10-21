@@ -26,7 +26,6 @@ export class DisplayComponent implements OnInit {
   message = '';
   number = 0;
   possibleMessages: Message[];
-  uncertain: boolean = false;
 
   constructor(
     private messageService: MessageService,
@@ -37,11 +36,6 @@ export class DisplayComponent implements OnInit {
   }
 
   getMessage(){
-
-    if( this.globals.uncertain != this.uncertain ){
-        this.getMessages();
-        this.uncertain = !this.uncertain;
-    }
 
     let messageList = this.possibleMessages;
 
