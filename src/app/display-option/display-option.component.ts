@@ -9,7 +9,7 @@ import { Globals } from '../globals';
 })
 export class DisplayOptionComponent implements OnInit {
 
-  constructor( private globals: Globals ) { }
+  constructor( public globals: Globals ) { }
 
   ngOnInit() {
   }
